@@ -36,4 +36,11 @@ public class FuncionarioController {
 		
 		return mv;
 	}
+	
+	@RequestMapping("/deletarFuncionario")
+	public String deletarFuncionario(String rg){
+		Funcionario funcionario = fr.findByRg(rg);
+		fr.delete(funcionario);
+		return "redirect:/funcionarios";
+	}
 }

@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import com.petshop.models.Funcionario;
 
 public interface FuncionarioRepository extends CrudRepository<Funcionario, String>{
-	
+	Funcionario findByRg(String rg);
 }
