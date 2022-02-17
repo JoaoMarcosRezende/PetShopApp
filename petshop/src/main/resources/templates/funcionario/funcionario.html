@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="icon" href="pet_paw.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+
+    <title>Pet Shop</title>
+</head>
+<body class="light-blue lighten-4">
+    <nav>
+        <div class="nav-wrapper light-blue">
+          <a href="#" class="brand-logo light-blue" style="padding-left:100px;font-weight:bold;"><i class="material-icons left">pets</i>Lista de Funcionários</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down light-blue">
+            <li><a href="/clientes"><i class="material-icons left">format_list_bulleted</i>Clientes</a></li>
+            <li><a href="/funcionarios"><i class="material-icons left">face</i>Funcionários</a></li>
+            <li><a href="#"><i class="material-icons left">check_circle</i>Serviços</a></li>
+          </ul>
+        </div>
+    </nav>
+    <h3 style="text-align: center;"><a class="waves-effect waves-light btn light-blue" href="/cadastrarFuncionario"><i class="material-icons left">add_circle_outline</i>Cadastrar Funcionário</a></h3>
+    <table class="container centered" style="border: solid black 1px;">
+        <thead class="light-blue white-text" >
+            <tr style="border: solid black 1px;">
+                <th style="border: solid black 1px;">Nome</th>
+                <th style="border: solid black 1px;">RG</th>
+                <th>Cargo</th>
+            </tr>
+        </thead>
+        <tbody class="light-blue lighten-2" style="border: solid black 1px;">
+            <tr th:each="funcionario : ${funcionarios}" style="border: solid black 1px;">
+                <td style="border: solid black 1px;"><span th:text="${funcionario.nome}"></span></td>
+                <td><span th:text="${funcionario.rg}"></span></td>
+                <td><span th:text="${funcionario.cargo}"></span></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>    
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+
+    <title>Pet Shop</title>
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <h3><a class="waves-effect waves-light btn light-blue accent-3" href="/clientes"><i class="material-icons left">format_list_bulleted</i>Lista de Clientes</a></h3>
+    <form class="container" method="post">
+        <div class="row">
+            <div class="input-field col s8">
+                Nome: <input type="text" value="" name="nome"/>
+            </div>
+            <div class="input-field col s4">
+                CPF: <input type="text" value="" name="cpf"/>
+            </div>
+        </div>
+        <button class="waves-effect waves-light btn light-blue accent-3" type="submit">Cadastrar</button>
+    </form>
+
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>
