@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Servico implements Serializable{
@@ -20,6 +21,9 @@ private static final long serialVersionUID = 1L;
 	private String horario;
 	private String cliente;
 	private String tipo;
+	
+	@ManyToOne
+	private Cliente client;
 	
 	public String getData() {
 		return data;
@@ -50,6 +54,12 @@ private static final long serialVersionUID = 1L;
 	}
 	public void setCodigo(long codigo) {
 		this.codigo = codigo;
+	}
+	public Cliente getClient() {
+		return client;
+	}
+	public void setClient(Cliente client) {
+		this.client = client;
 	}
 	
 	

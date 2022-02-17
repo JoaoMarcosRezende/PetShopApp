@@ -21,11 +21,11 @@
           </ul>
         </div>
     </nav>
-    <h3 style="text-align: center;"><a class="waves-effect waves-light btn light-blue" href="/cadastrarServico"><i class="material-icons left">add_circle_outline</i>Novo Serviço</a></h3>
+    <p style="padding-top: 100px;"></p>
     <table class="container centered" style="border: solid black 1px;">
         <thead class="light-blue white-text" >
             <tr style="border: solid black 1px;">
-                <th style="border: solid black 1px;">Cliente</th>
+                <th style="border: solid black 1px;">Código do serviço</th>
                 <th style="border: solid black 1px;">Data</th>
                 <th style="border: solid black 1px;">Horário</th>
                 <th>Tipo</th>
@@ -33,7 +33,7 @@
         </thead>
         <tbody class="light-blue lighten-2" style="border: solid black 1px;">
             <tr th:each="servico : ${servicos}" style="border: solid black 1px;">
-                <td style="border: solid black 1px;"><span th:text="${servico.cliente}"></span></td>
+                <td style="border: solid black 1px;"><span th:text="${servico.codigo}"></span></td>
                 <td style="border: solid black 1px;"><span th:text="${servico.data}"></span></td>
                 <td style="border: solid black 1px;"><span th:text="${servico.horario}"></span></td>
                 <td><span th:text="${servico.tipo}"></span></td>

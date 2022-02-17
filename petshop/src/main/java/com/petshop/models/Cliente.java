@@ -1,25 +1,22 @@
 package com.petshop.models;
 
-import java.io.Serializable;
-
+import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 @Entity
-public class Cliente implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
+public class Cliente{
 	
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
-	private long codigo;
+	private String cpf;
 	
 	private String nome;
-	private String cpf;
+	
+	@OneToMany
+	private List<Servico> servicos;
 	
 	public String getNome() {
 		return nome;
@@ -33,13 +30,5 @@ public class Cliente implements Serializable{
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public long getCodigo() {
-		return codigo;
-	}
-	public void setCodigo(long codigo) {
-		this.codigo = codigo;
-	}
-	
-	
-	
+
 }
