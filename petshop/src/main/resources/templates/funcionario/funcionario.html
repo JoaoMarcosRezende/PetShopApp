@@ -17,7 +17,7 @@
           <ul id="nav-mobile" class="right hide-on-med-and-down light-blue">
             <li><a href="/clientes"><i class="material-icons left">format_list_bulleted</i>Clientes</a></li>
             <li><a href="/funcionarios"><i class="material-icons left">face</i>Funcionários</a></li>
-            <li><a href="#"><i class="material-icons left">check_circle</i>Serviços</a></li>
+            <li><a href="/servicos"><i class="material-icons left">check_circle</i>Serviços</a></li>
           </ul>
         </div>
     </nav>
@@ -33,7 +33,7 @@
         <tbody class="light-blue lighten-2" style="border: solid black 1px;">
             <tr th:each="funcionario : ${funcionarios}" style="border: solid black 1px;">
                 <td style="border: solid black 1px;"><span th:text="${funcionario.nome}"></span></td>
-                <td><span th:text="${funcionario.rg}"></span></td>
+                <td style="border: solid black 1px;"><span th:text="${funcionario.rg}"></span></td>
                 <td><span th:text="${funcionario.cargo}"></span></td>
             </tr>
         </tbody>

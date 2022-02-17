@@ -45,6 +45,12 @@ private static final long serialVersionUID = 1L;
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+	public long getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
+	}
 	
 	
 }

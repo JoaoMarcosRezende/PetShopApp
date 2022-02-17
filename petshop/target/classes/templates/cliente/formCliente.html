@@ -4,21 +4,35 @@
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="icon" href="pet_paw.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
-
+    <style>
+        ::placeholder{
+            color: grey;
+        }
+    </style>
     <title>Pet Shop</title>
 </head>
-<body>
-    <h1>Cadastro de Clientes</h1>
-    <h3><a class="waves-effect waves-light btn light-blue accent-3" href="/clientes"><i class="material-icons left">format_list_bulleted</i>Lista de Clientes</a></h3>
+<body class="light-blue lighten-4">
+    <nav>
+        <div class="nav-wrapper light-blue">
+          <a href="#" class="brand-logo light-blue" style="padding-left:100px;font-weight:bold;"><i class="material-icons left">pets</i>Cadastro de Clientes</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down light-blue">
+            <li><a href="/clientes"><i class="material-icons left">format_list_bulleted</i>Clientes</a></li>
+            <li><a href="/funcionarios"><i class="material-icons left">face</i>Funcionários</a></li>
+            <li><a href="/servicos"><i class="material-icons left">check_circle</i>Serviços</a></li>
+          </ul>
+        </div>
+    </nav>
+    <h3 style="text-align: center;"><a class="waves-effect waves-light btn light-blue accent-3" href="/clientes"><i class="material-icons left">format_list_bulleted</i>Lista de Clientes</a></h3>
     <form class="container" method="post">
         <div class="row">
             <div class="input-field col s8">
-                Nome: <input type="text" value="" name="nome"/>
+                Nome: <input type="text" value="" name="nome" placeholder="Nome do cliente"/>
             </div>
             <div class="input-field col s4">
-                CPF: <input type="text" value="" name="cpf"/>
+                CPF: <input type="text" value="" name="cpf" placeholder="000.000.000-00"/>
             </div>
         </div>
         <button class="waves-effect waves-light btn light-blue accent-3" type="submit">Cadastrar</button>
